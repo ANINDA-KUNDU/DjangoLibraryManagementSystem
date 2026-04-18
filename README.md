@@ -35,7 +35,3 @@ This is ANINDA KUNDU's `Django Library Mangement System( Python, django )`. This
 <br>
 
 
-<video width="640" height="480" controls>
-    <source src="screenshot/library_screen_recording.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-</video>
