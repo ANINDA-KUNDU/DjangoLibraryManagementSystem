@@ -1,6 +1,6 @@
 ﻿# `ANINDA's Django Library Mangement System`
 
-This is ANINDA KUNDU's `Django Library Mangement System`. This project is develoeped by me with Python, Django. This project is a part of my self - project.
+This is ANINDA KUNDU's `Django Library Mangement System( Python, django )`. This project is develoeped by me with Python, Django. This project is a part of my self - project.
 
 > This Library Management System uses `Python`, `Django`, `Django REST API`, `MySQL`, `HTML`, `CSS` & `JavaScript`.
 
