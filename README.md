@@ -35,3 +35,4 @@ This is ANINDA KUNDU's `Django Library Mangement System( Python, django )`. This
 <br>
 
 
+&copy; ALL RIGHTS ARE RESERVED BY ANINDA KUNDU.
