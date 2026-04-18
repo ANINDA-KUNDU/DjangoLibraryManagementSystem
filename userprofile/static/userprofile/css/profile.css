@@ -1,0 +1,66 @@
+.indian {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.sea {
+    width: 280px;
+    height: 300px;
+    margin: 0px;
+    padding: 0px;
+}
+.river {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.polar {
+    width: 30px;
+    height: 40px;
+    border-radius: 50%;
+}
+.bear {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.polar:hover {
+    margin: 1%;
+    border: 1px solid black;
+    padding: 1%;
+}
+.seahorse {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.seal {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 1%;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+.penguine {
+    text-align: center;
+    border-radius: 20px;
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1%;
+    scroll-behavior: smooth;
+}
+.penguine:hover {
+    background-color: whitesmoke;
+    font-weight: bold;
+    scroll-behavior: smooth;
+    transition: 0.5s ease-out;
+}

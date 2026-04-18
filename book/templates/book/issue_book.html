@@ -1,0 +1,72 @@
+{%  extends 'core/base.html' %}
+{%  load static %}
+{%  block title %}Issue Book{% endblock  %}
+{%  block content  %}
+
+<h1>Issue Book</h1>
+
+<div class = "tom">
+    <div>
+        {% if messages %}
+            {% for message in messages  %}
+                {%  if message.tags == 'error' %}
+                    <p>{{message}}</p>
+                {% else  %}
+                    <p>{{message}}</p>
+                {%  endif %}
+            {%  endfor  %}
+        {% endif   %}
+    </div>
+
+    <div class = "antimatter">
+        <div class = "spacecraft">
+            <a href = "{% url 'create_issue_book'  %}" class = "astroid">Create Issue Book</a>
+            <p class = "meteor">{{book | length}}</p>
+        </div>
+        <div class = "superrocket">
+            <form method = "GET" action = "{% url 'search' %}" class = "dimension">
+                <input type = "search" name="search" class = "search">
+                <button type = "submit" class = "blackhole">Search</button>
+            </form>
+        </div>
+        
+    </div>
+
+
+    <div class = "galaxy">
+        {% for book in books %}
+            {%  if book.is_returned == True %}
+                <a href = "{%  url 'detail_issue_book' book.pk %}" class = "ocean">
+                    <div class = "artemis">
+                        <figure class = "planet">
+                            <img src = "{{book.image_book.url}}" alt = "Book Image" class = "star">
+                        </figure>
+                        <p class = "gravity">{{book.name}}</p>
+                        <p class = "gravity">{{book.author}}</p>
+                        <p class = "gravity">{{book.borrower_name}}</p>
+                        <p class = "gravity">{{book.issue_date | date:'d-m-Y H:i'}}</p>
+                        {% if book.is_returned == True  %}
+                            <p class = "gravity">RETURNED</p>
+                        {% endif   %}
+                    </div>
+                </a>
+            {% else %}
+                <a href = "{%  url 'detail_issue_book' book.pk %}" class = "ring">
+                    <div class = "universe">
+                        <figure class = "planet">
+                            <img src = "{{book.image_book.url}}" alt = "Book Image" class = "star">
+                        </figure>
+                        <p class = "gravity">{{book.name}}</p>
+                        <p class = "gravity">{{book.author}}</p>
+                        <p class = "gravity">{{book.borrower_name}}</p>
+                        <p class = "gravity">{{book.issue_date | date:'d-m-Y H:i'}}</p>
+                    </div>
+                </a>
+            {% endif %}
+        {% endfor  %}
+    </div>
+</div>
+
+
+
+{% endblock  %}

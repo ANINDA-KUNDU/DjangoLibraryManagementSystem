@@ -1,0 +1,55 @@
+.mountain {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.atlantis {
+    border: 1px solid black;
+    border-radius: 25px;
+    width: 50%;
+    text-align: center;
+    box-shadow: 5px 15px 10px 7px silver;
+}
+.neptune {
+    text-align: left;
+    font-weight: bold;
+    margin-left: 3%;
+    display: block;
+}
+.karaken {
+    width: 90%;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding-left: 2%;
+    margin-bottom: 3%;
+}
+.mammoth {
+    width: 92%;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 20px;
+    font-size: 16px;
+    background-color: white;
+    margin-bottom: 5%;
+}
+.mammoth:hover {
+    color: white;
+    font-weight: bold;
+    background: linear-gradient( to right, #df02df 40%, #970097 50%, #3c003c 60% );
+    background-size: 300%;
+    background-position-x: 100%;
+    animation: shimmer 1s infinite linear;
+}
+@keyframes shimmer {
+    to {
+        background-position-x: 0%;
+    }
+}
+@media ( max-width: 768px ) {
+    .atlantis {
+        width: 100%;
+    }
+}

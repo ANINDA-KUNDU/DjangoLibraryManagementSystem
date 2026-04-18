@@ -1,0 +1,37 @@
+{%  load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "{% static 'core/css/header.css'  %}">
+    <link rel = "stylesheet" href = "{% static 'book/css/issue_book.css' %}">
+    <link rel = "stylesheet" href = "{% static 'book/css/create_issue_book.css'  %}">
+    <link rel = "stylesheet" href = "{% static 'book/css/detail_issue_book.css' %}">
+    <link rel = "stylesheet" href = "{% static 'book/css/edit_issue_book.css' %}">
+    <link rel = "stylesheet" href = "{% static 'book/css/search.css' %}">
+    <link rel = "stylesheet" href = "{% static 'userprofile/css/profile.css' %}">
+    <link rel = "stylesheet" href = "{% static 'userprofile/css/edit_profile.css' %}">
+    <link rel = "stylesheet" href = "{% static 'authenticate/css/signup.css' %}">
+    <link rel = "stylesheet" href = "{% static 'authenticate/css/login.css' %}">
+    <link rel = "stylesheet" href = "{% static 'authenticate/css/forget_password.css' %}">
+    <link rel = "stylesheet" href = "{% static 'authenticate/css/forget_password_sent.css' %}">
+    <link rel = "stylesheet" href = "{% static 'authenticate/css/reset_password.css'  %}">
+    <link rel = "stylesheet" href = "{% static 'core/css/footer.css'  %}">
+    <link rel = "stylesheet" href = "{% static 'core/css/style.css' %}">
+    <link rel = "icon" type = "image/x-icon" href = "{% static 'core/favicon/icon.ico' %}">
+    <title>{% block title  %}{%  endblock %}</title>
+    {% block meta %}
+    {% endblock %}
+</head>
+<body>
+    {%  include 'core/partials/header.html' %}
+    <main>
+        {% block content %}
+        {% endblock  %}
+    </main>
+    {%  include 'core/partials/footer.html' %}
+    {%  block script %}
+    {%  endblock %}
+</body>
+</html>

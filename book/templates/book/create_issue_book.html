@@ -1,0 +1,35 @@
+{% extends 'core/base.html'  %}
+{% load static  %}
+{% block title %}Create Issue Book{%  endblock %}
+{% block content %}
+
+
+
+<div class = "land">
+    <form method = "POST" enctype = "multipart/form-data" class = "water">
+        {%  csrf_token %}
+        <h1>Create Issue Book</h1>
+        <div>
+            <input type = "file" name = "image_book">
+        </div>
+        <div>
+            <label class = "sea">Name</label>
+            <input type = "text" name = "name" class = "bay">
+        </div>
+        <div>
+            <label class = "sea">Author</label>
+            <input type = "text" name = "author" class = "bay">
+        </div>
+        <div>
+            <label class = "sea">Borrower Name</label>
+            <input type = "text" name = "borrower_name" class = "bay">
+        </div>
+        <button type = "submit" class = "air">Create Issue Book</button>
+    </form>
+</div>
+
+
+
+
+
+{%  endblock %}

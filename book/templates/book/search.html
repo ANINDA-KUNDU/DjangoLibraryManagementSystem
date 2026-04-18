@@ -1,0 +1,44 @@
+{%  extends 'core/base.html' %}
+{%  load static  %}
+{%  block title  %}Search Page{% endblock  %}
+{%  block content %}
+
+<div class = "tom">
+    <div class = "light">
+        <form method = "GET" action = "{% url 'search'  %}" class = "sun" >
+            <input type = "search" name = "search" class = "moon" >
+            <button type = "submit" class = "venus">Search</button>
+        </form>
+    </div>
+
+    {% if query %}
+        <p class = "murcary">Search results for <strong>"{{ query }}"</strong> in just 0.25s</p>
+    {% else %}
+        <p class = "murcary">Enter a search term to find books by name, author, or borrower.</p>
+    {% endif %}
+
+    <div class = "jupiter">
+        {% if query and books.exists %}
+            {% for book in books %}
+                <a href = "{% url 'detail_issue_book' book.pk %}" class = "nebula">
+                    <div class = "saturn">
+                        <figure class = "convex">
+                            {%  if book.image_book %}
+                                <img src = {{book.image_book.url}} alt = "Image of {{book.name}}" class = "conclave">
+                            {%  endif %}
+                        </figure>
+                        <p class = "celestial">{{ book.name }}</p>
+                        <p class = "celestial">{{ book.author }}</p>
+                        <p class = "celestial">{{ book.borrower_name }}</p>
+                    </div>
+                </a>
+            {% endfor %}
+        {% elif query %}
+            <p>No results found for <strong>"{{ query }}"</strong>.</p>
+        {% endif %}
+</div>
+</div>
+
+
+
+{%  endblock %}

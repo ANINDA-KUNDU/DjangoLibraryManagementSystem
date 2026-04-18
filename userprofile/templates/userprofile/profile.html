@@ -1,0 +1,44 @@
+{% extends 'core/base.html' %}
+{%  load static %}
+{%  block title %}Profile Page{% endblock  %}
+{%  block content %}
+
+<h1>Profile</h1>
+
+<div>
+    {% if messages  %}
+        {%  for message in messages  %}
+            {%  if message.tags == 'error' %}
+                <p>{{message}}</p>
+            {% else  %}
+                <p>{{message}}</p>
+            {%  endif %}
+        {%  endfor %}
+    {% endif %}
+</div>
+
+<div class = "indian">
+    <figure class = "sea">
+        {% if profile.profile_image %}
+            <img src = "{{ profile.profile_image.url }}" alt = "Profile Pic for {{ request.user.get_full_name }}" class = "river">
+        {% endif %}
+    </figure>
+    <div class = "polar">
+        <a href = "{% url 'edit_profile' profile.pk  %}">
+            <img src = "{% static 'userprofile/icon/icon_edit_profile.png' %}" alt = "Icon of Edit" class = "bear">
+        </a>
+    </div>
+</div>
+<div class = "seahorse">
+    <div class = "seal">
+        <p>{{profile.first_name}}</p>&nbsp;&nbsp;
+        <p>{{profile.last_name}}</p>
+    </div>
+</div>
+
+<p class = "penguine">{{profile.location}}</p>
+
+
+
+
+{%  endblock %}

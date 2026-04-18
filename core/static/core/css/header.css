@@ -1,0 +1,91 @@
+header {
+    margin: 0px;
+    padding: 0px;
+}
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+.bottle {
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+}
+.bottle:hover {
+    font-weight: bold;
+    color: navy;
+}
+.burger {
+    display: none;
+}
+.fish{
+    display: flex;
+    margin-left: auto;
+    margin-top: auto;
+    gap: 20px;
+}
+.curry {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+.curry:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+.soup {
+    color: black;
+    font-size: 20px;
+}
+@media ( max-width: 768px ) {
+    .bottle {
+        font-size: 25px;
+        color: navy;
+        font-weight: bold;
+    }
+    .burger {
+        display: block;
+        font-size: 0;
+        margin-left: auto;
+        position: relative;
+        cursor: pointer;
+        z-index: 1001;
+    }
+    .burger::before {
+        content: "\2630";
+        font-size: 30px;
+    }
+    .burger.show::before {
+        content: "X";
+        font-size: 30px;
+        color: white;
+    }
+    .fish {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #013001;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 25px;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+        
+    }
+    .fish.active {
+        transform: translateY(0);
+        right: 0;
+    }
+    .curry {
+        color: white;
+    }
+    body.menu-open {
+        overflow: hidden;
+    }
+}

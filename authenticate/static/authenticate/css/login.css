@@ -1,0 +1,58 @@
+.turbo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+}
+.engine {
+    text-align: center;
+    width: 50%;
+    border-radius: 25px;
+    box-shadow: 5px 15px 10px 7px silver;
+}
+.raptor {
+    display: block;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 3%;
+}
+.bomber {
+    width: 90%;
+    height: 40px;
+    padding-left: 3%;
+    font-size: 15px;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin-bottom: 2%;
+}
+.global {
+    width: 94%;
+    height: 40px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 20px;
+    font-size: 15px;
+}
+.global:hover {
+    font-weight: bold;
+    color: white;
+    background: linear-gradient( to right, #03cc03 40%, #039f03 50%, #005100 60% );
+    background-size: 300%;
+    background-position-x: 0%;
+    animation: shimmer 1s infinite linear;
+}
+@keyframes shimmer {
+    to {
+        background-position-x: 100%;
+    }
+}
+@media ( max-width: 768px ){
+    .engine {
+        width: 100%;
+    }
+    .global {
+        background-color: #02d202;
+        color: white;
+    }
+}

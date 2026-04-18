@@ -1,0 +1,148 @@
+.message_frame {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.error {
+    text-align: center;
+    color: white;
+    background-color: red;
+    border-radius: 25px;
+    font-size: 15px;
+    width: 50%;
+    padding: 2%;
+}.success {
+    text-align: center;
+    color: white;
+    background-color: green;
+    border-radius: 25px;
+    font-size: 15px;
+    width: 50%;
+    padding: 2%;
+}
+.electron {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.electric {
+    text-align: center;
+    width: 50%;
+    border: 1px solid black;
+    border-radius: 20px;
+    box-shadow: 5px 10px 15px 7px #8f8e8e;
+}
+.paper {
+    display: block;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 2%;
+    margin-top: 2%;
+}
+.pen {
+    width: 95%;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding-left: 3%;
+}
+.write {
+    width: 97%;
+    height: 45px;
+    border: 1px solid black;
+    border-radius: 20px;
+    font-size: 15px;
+    background-color: white;
+    margin: 2%;
+}
+.write:hover {
+    background: linear-gradient( to right, #d103d1 40%, #ab11ab 50%, #6b0d6b 60% );
+    background-size: 300%;
+    background-position-x: 100%;
+    animation: shimmer 1s infinite linear;
+    color: white;
+    font-weight: bold;
+}
+@keyframes shimmer {
+    to {
+        background-position-x: 0%;
+    }
+}
+.checking {
+    border: 1px solid green;
+    border-radius: 25px;
+    width: 95%;
+    height: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    margin-left: 3%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    scroll-behavior: smooth;
+}
+.checking:hover {
+    background-color: green;
+    border: 3px solid #024f02;
+    border-radius: 25px;
+    scroll-behavior: smooth;
+    transition: 0.5s ease;
+}
+.checking:hover > .eassy {
+    margin: 2%;
+    scroll-behavior: smooth;
+    transition: 0.5s ease;
+}
+.checking:hover > .eassy {
+    color: white;
+    font-weight: bold;
+    scroll-behavior: smooth;
+    transition: 0.5s ease;
+}
+.paragraph {
+    width: 5%;
+    height: 95%;
+    border: 1px solid black;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.eassy {
+    text-decoration: none;
+    color: black;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.eassy:hover {
+    color: white;
+    font-weight: bold;
+    text-decoration: underline;
+}
+@media ( max-width: 768px ) {
+    .electric {
+        width: 100%;
+    }
+    .write {
+        background-color: #ba07ba;
+        color: white;
+    }
+    .checking {
+        background-color: green;
+    }
+    .paragraph {
+        width: 10%;
+        height: 95%;
+        margin-right: 3%;
+    }
+    .eassy {
+        color: white;
+    }
+    .error {
+        width: 90vw;
+    }
+    .success {
+        width: 90vw;
+    }
+}

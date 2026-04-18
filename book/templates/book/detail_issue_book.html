@@ -1,0 +1,51 @@
+{%  extends 'core/base.html' %}
+{%  load static %}
+{%  block title %}Detail Issue Book{%  endblock %}
+{%  block content %}
+
+<div class = "tom">
+    <div class = "mobile">
+        <div class = "network">
+            <figure>
+                <img src = "{{books.image_book.url}}" alt = "Image {{books.name}}" class = "high-speed">
+            </figure>
+        </div>
+        <div class = "unlimited">
+            <div>
+                <h1>Detail Issue Book</h1>
+                <p><strong>Name of Book:</strong>  {{books.name}}</p>
+                <p><strong>Name of Author:</strong> {{books.author}}</p>
+                <p><strong>Borrower Book:</strong> {{books.borrower_name}}</p>
+                <div>
+                <div>
+                    {% if books.is_returned == True  %}
+                        <p  class = "pack">Book is Returned</p>
+                    {%  else %}
+                        <p class = "data">Not Returned</p>
+                        <p><strong>Late Days:</strong> {{books.late_days}}</p>
+                        <p><strong>Late Fine:</strong> ${{books.late_fine}}</p>
+                    {% endif  %}
+                </div>
+                <div class = "compulsory">
+                    <a href = "{% url 'edit_issue_book' books.pk  %}">
+                        <img src = "{% static 'book/icon/edit_icon.png' %}" alt = "icon of edit" class = "recharge">
+                    </a>
+                    <a href = "{% url 'delete_issue_book' books.pk  %}">
+                        <img src = "{%  static 'book/icon/icon_delete.png' %}" alt = "icon of delete" class = "flexcharge">
+                    </a>
+                    <a href = "{% url 'update_issue_book' books.pk  %}">
+                        <img src = "{%  static 'book/icon/icon_update.png' %}" alt = "icon of update" class = "connect">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+{%  endblock %}

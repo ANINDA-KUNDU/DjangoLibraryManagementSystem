@@ -1,0 +1,34 @@
+{%  extends 'core/base.html' %}
+{%  load static %}
+{%  block title %}Edit Issue Book{%  endblock %}
+{%  block content %}
+
+
+
+<div class = "mountain">
+    <form method = "POST" enctype = "multipart/form-data" class = "atlantis">
+        {%  csrf_token %}
+        <h1>Edit Issue Book Page</h1>
+        <div>
+            <label class = "neptune">Book Name</label>
+            <input type = "text" name = "name" value = "{{books.name}}" class = "karaken">
+        </div>
+        <div>
+            <input type = "file" name = "image_book" value = "{{books.image_book.url}}">
+        </div>
+        <div>
+            <label class = "neptune">Author</label>
+            <input type = "text" name = "author" id = "author" value = "{{books.author}}" class = "karaken">
+        </div>
+        <div>
+            <label class = "neptune">Borrower Name</label>
+            <input type = "text" name = "borrower_name" value = "{{books.borrower_name}}" class = "karaken" >
+        </div>
+        <button type = "submit" class = "mammoth">Edit Issue Book</button>
+    </form>
+</div>
+
+
+
+
+{%  endblock %}

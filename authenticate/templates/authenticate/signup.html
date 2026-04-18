@@ -1,0 +1,61 @@
+{%  extends 'core/base.html'  %}
+{%  load static %}
+{%  load socialaccount %}
+{%  block title %}Signup Page{%  endblock %}
+{%  block content %}
+
+
+<div class = "message_frame">
+    {% if messages %}
+        {% for message in messages %}
+            {%  if message.tags == 'error' %}
+                <p class = "error">{{message}}</p>
+            {% else %}
+                <p class = "success">{{message}}</p>
+            {%  endif %}
+        {%  endfor %}
+    {% endif  %}
+</div>
+
+<div class = "electron">
+    <form method = "POST" class = "electric">
+        {% csrf_token  %}
+        <h1>Signup Page</h1>
+        <div>
+            <label class = "paper">First Name</label>
+            <input type = "text" name = "first_name" class = "pen">
+        </div>
+        <div>
+            <label class = "paper">Last Name</label>
+            <input type = "text" name = "last_name" class = "pen">
+        </div>
+        <div>
+            <label class = "paper">Username</label>
+            <input type = "text" name = "username" class = "pen">
+        </div>
+        <div>
+            <label class = "paper">Email</label>
+            <input type = "email" name = "email" class = "pen">
+        </div>
+        <div>
+            <label class = "paper">Password</label>
+            <input type = "password" name = "password" class = "pen">
+        </div>
+        <button type = "submit" class = "write">Signup</button>
+        <div class = "checking">
+            <img src = "{% static 'authenticate/icon/icon_google.jpg' %}" alt = "Icon of Google" class = "paragraph">
+            <a href = "{% provider_login_url 'google'  %}" class = "eassy">Sign With Google</a>
+        </div>
+        <div class = "checking">
+            <img src = "{% static 'authenticate/icon/icon_github.png' %}" alt = "Icon of Github" class = "paragraph">
+            <a href = "{% provider_login_url 'github'  %}" class = "eassy">Sign With GitHub</a>
+        </div>
+        <div class = "checking">
+            <img src = "{%  static 'authenticate/icon/icon_x.png' %}" alt = "Icon of  X" class = "paragraph">
+            <a href = "{% provider_login_url 'twitter_oauth2'   %}" class = "eassy">Sign With X</a>
+        </div>
+    </form>
+</div>
+
+
+{%  endblock %}

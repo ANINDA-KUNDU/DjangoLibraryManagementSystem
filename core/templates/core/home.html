@@ -1,0 +1,149 @@
+{% extends 'core/base.html' %}
+{%  load static %}
+{%  block title %}Home Page{% endblock  %}
+{%  block meta %}
+    <meta name = "description" content = "This is ANINDA-KUNDU's Django Library Management System" />
+    <meta name = "suthor" content = "ANINDA KUNDU" />
+    <meta property = "og:title" content = "ANINDALIBRARY | Home" />
+    <meta property = "og:description" content = "This is ANINDA KUNDU's Django Library Management System" />
+    <meta property = "og:type" content = "Website" />
+    <meta property = "og:image" content = "https://heroku.com" />
+    <meta property = "og:url" content = "has to updated" />
+{%  endblock %}
+{%  block content %}
+
+
+<div class = "message_frame">
+    {%  if messages %}
+        {%  for message in messages  %}
+            {%  if message.tags == 'error' %}
+                <p class = "error">{{message}}</p>
+            {%  else %}
+                <p class = "success">{{message}}</p>
+            {%  endif %}
+        {%  endfor %}
+    {%  endif %}
+</div>
+
+<div>
+    {% if user.is_authenticated %}
+        <p class = "thunderbolt">Welcome, {{user.username}}</p>
+    {% else %}
+        <p class = "thunderbolt">You are not logged in.</p>
+    {% endif  %}
+</div>
+
+<div class = "tycoon">
+    <div class = "hurricane">
+        <p>Aninda Public</hp>
+        <p>Library</p><br>
+        <a href = "{% url 'signup' %}" class = "earthquake">Join Today</a>
+    </div>
+    <div class = "cyclone">
+        <figure class = "thunder">
+            <img src = "{%  static 'core/image/library1.jpg'  %}" alt = "Picture of Library" class = "storm">
+        </figure>
+    </div>
+</div>
+<div class = "london">
+    <div class = "birmingham">
+        <h3>Library Services & Resources</h3>
+        <p class = "trafalguard">We have plentty of books and other documents. 
+            Readers can enjoy by reading them round the clock.
+        </p>
+        <h3>Library Card</h3>
+        <p class = "trafalguard">
+            We used to issue Library Card to all the user of our Library. There is separate block for childeren.
+        </p>
+        <h3>Kids & Team Education</h3>
+        <p class = "trafalguard">
+            We have collection for all sorts of collection for all the minds. People will enjoy by reading them.
+        </p>
+        <h3>Our Outreach Programmee</h3>
+        <p class = "trafalguard">
+            We have different programmees for specific subjects and we use to conduct it on a regular basics.
+        </p>
+    </div>
+    <div class = "manchester">
+        <figure class = "square">
+            <img src = "{% static 'core/image/library3.jpg' %}" alt = "Picture of Library" class = "welsh">
+        </figure>
+    </div>
+</div>
+<div class = "intersteller">
+    <p>Library Resourses</p>
+</div>
+<div class = "summer">
+    <div class = "climate">
+        <h1>Getting Involved Is Easy</h1>
+        <p>
+            It is easy to involve in our Library. 
+            Our voluenters are really encouraging and enthusiastic. 
+            We always take care of our readers. We used to proactively observe the needs of our readers. 
+            Our raeders are our wealth.
+        </p>
+    </div>
+    <div class = "weather">
+        <h3>Voluenteer Programmee</h3>
+        <p>You need to complete a few steps to voluenteer for our library.</p>
+        <h3>Aninda Library Foundation</h3>
+        <p>We are moving forward with the vision and leadership of our founding father ANINDA KUNDU.</p>
+        <h3>Partner with us</h3>
+        <p>It is a great experience to become a partner with us.</p>
+        <h3>Donate Books & Materials</h3>
+        <p>You can donate unnecessary books and materials so that needy person can be beniffited.</p>
+    </div>
+</div>
+<div class = "monarch">
+    <div class = "throne">
+        <figure class = "royal">
+            <img src = "{% static 'core/image/library4.jpg' %}" alt = "Image of Library" class = "consent">
+        </figure>
+    </div>
+    <div class = "palace">
+        <h1>Using The Library</h1>
+        <p>A library can enrich your mind and wisdom. A libarry member can contribute positively in so many ways.</p>
+        <div class = "guard">
+            <h3>Library Cards</h3>
+            <p>Our Library issues library card to their members.</p>
+            <h3>Search Tools</h3>
+            <p>You can search the entry of your issued books.</p>
+            <h3>Equipment & Space uses</h3>
+            <p>Libarry members can use all the Equipments & Space for their reading.</p>
+        </div>
+    </div>
+</div>
+<div class = "university">
+    <p>Resourses</p>
+    <div class = "college">
+        <div class = "school">
+            <figure class = "primary">
+                <img src = "{% static 'core/image/library1.jpg' %}" alt = "First Library Image" class = "chancellor">
+            </figure>
+            <h3>Resourse & Study Room</h3>
+        </div>
+        <div class = "school">
+            <figure class = "primary">
+                <img src = "{% static 'core/image/library3.jpg' %}" alt = "Second Library Image" class = "chancellor">
+            </figure>
+            <h3>Research & Computers</h3>
+        </div>
+        <div class = "school">
+            <figure class = "primary">
+                <img src = "{% static 'core/image/library4.jpg' %}" alt = "Third Library Image" class = "chancellor">
+            </figure>
+            <h3>Borrow Materials</h3>
+        </div>
+        <div class = "school">
+            <figure class = "primary">
+                <img src = "{% static 'core/image/library5.jpg' %}" alt = "Fourth Library Image" class = "chancellor">
+            </figure>
+            <h3>Find Matters</h3>
+        </div>
+    </div>
+</div>
+
+
+
+
+{%  endblock %}

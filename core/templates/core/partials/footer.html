@@ -1,0 +1,49 @@
+{% load static %}
+<footer>
+    <div class = "economic">
+        <div class = "master">
+            <h3>ADDRESS</h3>
+            <p>West Bengal, India</p>
+        </div>
+        <div class = "master">
+            <h3>LIBRARY HOURS</h3>
+            <p><b>Monday - Friday</b></p>
+            <p>9:00am - 5:00pm</p><br>
+            <p><b>Sunday - Saturday</b></p>
+            <p>Closed.</p>
+        </div>
+        <div class = "master">
+            <h3>CONTACT US</h3>
+            <p><b>Mobile Number:</b> +91 9876543210</p>
+            <p><b>Email:</b>kunduaninda@yahoo.com</p>
+        </div>
+        <div class = "master">
+            <h3>POPULAR RESOURSES</h3>
+            <div>
+                <a href = "{% url 'home' %}" class = "forum">Home</a>
+                <a href = "{% url 'signup' %}" class = "forum">Sign Up</a>
+                <a href = "{% url 'login' %}" class = "forum">Login</a>
+                <a href = "{% url 'issue_book' %}" class = "forum">Issue Book</a>
+            </div>
+        </div>
+    </div>
+    <div class = "truck">
+        <div class = "uplink">
+            <h2>AnindaLibrary</h2>
+            <p>This is Aninda's Library Management System. I have developed this Project with Python and Django. This is a part of my self - project.</p>
+        </div>
+        <div class = "lorry">
+            <div class = "tony">
+                <a href = "https://github.com/ANINDA-KUNDU?tab=repositories" class = "stark">
+                    <img src = "{% static 'authenticate/icon/icon_github.png'  %}" alt = "Icon of Github" class = "social_link">
+                </a>
+            </div>
+            <div class = "tony">
+                <a href = "https://www.linkedin.com/in/aninda-kundu-481718188/recent-activity/all/" alt = "Icon of LinkedIn" class = "social_link">
+                    <img src = "{% static 'authenticate/icon/icon_linkedin.jpg' %}" alt = "Icon of LinkedIn" class = "social_link">
+                </a>
+            </div>
+        </div>
+    </div>
+    <p>&copy; All Rights are Reserved by ANINDA KUNDU {% now 'Y' %}</p>
+</footer>

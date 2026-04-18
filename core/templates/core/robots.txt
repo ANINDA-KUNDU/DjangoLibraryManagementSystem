@@ -1,0 +1,11 @@
+User-agent: *
+Disallow: /privatestuff/
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: GoogleBot
+Disallow: /
+
+User-agent: AdsBot-Google
+Disallow: /

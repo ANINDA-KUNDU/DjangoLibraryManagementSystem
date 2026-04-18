@@ -1,0 +1,381 @@
+.thunderbolt {
+    margin-left: 3%;
+    font-size: 30px;
+    padding: 0px;
+}
+.tycoon {
+    min-height: 90vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.hurricane {
+    width: 20%;
+    height: 200px;
+    text-align: center;
+}
+.hurricane > p {
+    font-size: 50px;
+    margin: 0px;
+}
+.earthquake {
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 3%;
+    border-radius: 10px;
+    font-size: 20px;
+    margin-top: 2%;
+}
+.earthquake:hover {
+    font-weight: bold;
+    margin: 5%;
+    transition: 1s ease-in-out;
+}
+.cyclone {
+    width: 50%;
+    height: 70%;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.thunder {
+    width: 100%;
+    height: 100%;
+}
+.storm {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    animation: stormyEntrance 1s ease-out forwards;
+}
+@keyframes stormyEntrance {
+  0% {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0); 
+    opacity: 1;
+  }
+}
+@media ( max-width: 768px ){
+    
+    .hurricane {
+        width: 100%;
+    }
+    .cyclone {
+        width: 100%;
+        height: 300px;
+    }
+    .thunder {
+        height: 70%;
+    }
+}
+.london {
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.birmingham {
+    width: 30%;
+    height: 60%;
+    background-color: whitesmoke;
+    border-radius: 25px;
+    text-align: center;
+    animation: FadeSlideLeft 1s ease-out forwards;
+}
+@keyframes FadeSlideLeft {
+    0% {
+        transform: translateX(-200px);
+        opacity: 0;
+        transition: transform 1s ease;
+    }
+    100% {
+        transform: translateX(0px);
+        transition: transform 1s ease;
+        opacity: 1;
+    }
+}
+.trafalguard {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.manchester {
+    width: 40%;
+    height: 70%;
+}
+.square {
+    width: 90%;
+    height: 90%;
+}
+.welsh {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+    animation: FadeSlideRight 1s ease-out forwards;
+}
+@keyframes FadeSlideRight {
+    0% {
+        transform: translateX( 200px );
+        transition: transform 1s ease;
+        opacity: 0;
+    }
+    100% {
+        transform: translateX( 0px );
+        transform: transform 1s ease;
+        opacity: 1;
+    }
+}
+@media ( max-width: 768px ) {
+    .birmingham {
+        width: 100%;
+        height: 60%;
+    }
+    .trafalguard {
+        font-size: 12px;
+    }
+    .manchester {
+        width: 100%;
+        height: 35%;
+        text-align: center;
+    }
+    .square {
+        margin: auto;
+    }
+}
+.intersteller {
+    text-align: center;
+    background-color: whitesmoke;
+    height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.intersteller > p {
+    font-size: 50px;
+    animation: FadeDown 1s ease-in forwards;
+}
+@keyframes FadeDown {
+    0% {
+        transform: translateY(100px);
+        transition: transform 1s ease;
+        opacity: 0;
+    }
+    100% {
+        transform: translateY( 0px );
+        transform: transform 1s ease;
+        opacity: 1;
+    }
+}
+@media ( max-width: 768px ) {
+    .intersteller > p {
+        font-size: 40px;
+    }
+}
+.summer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.climate {
+    width: 30%;
+    height: 30%;
+    border-radius: 25px;
+    text-align: center;
+    animation: FadeSlideLeft 1s ease-in forwards;
+}
+@keyframes FadeSlideLeft {
+    0% {
+        transform: translateX( -150px );
+        transition: transform 1s ease;
+        opacity: 0;
+    }
+    100% {
+        transform: translateX( 0px );
+        transition: transform 1s ease;
+        opacity: 1;
+    }
+}
+.climate > p {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.weather {
+    width: 30%;
+    height: 60%;
+    background-color: whitesmoke;
+    border-radius: 25px;
+    animation: FadeSlideRight 1s ease-in forwards;
+}
+@keyframes FadeSlideRight {
+    0% {
+        transform: translateX( 150px );
+        transition: transform 1s ease;
+        opacity: 0;
+    }
+    100% {
+        transform: translateX( 0px );
+        transition: transform 1s ease;
+        opacity: 1;
+    }
+}
+.weather > p, .weather > h3 {
+    margin-right: 10%;
+    margin-left: 10%;
+}
+@media ( max-width: 768px ) {
+    .climate {
+        width: 100%;
+    }
+    .weather {
+        width: 100%;
+        height: 65%;
+    }
+    .weather > p {
+        font-size: 15px;
+    } 
+}
+.monarch {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.throne {
+    width: 40%;
+    height: 80%;
+}
+.royal {
+    width: 80%;
+    height: 95%;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+.consent {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+    animation: FadeSlideLeft 1s ease-in-out forwards;
+}
+@keyframes FadeSlideLeft {
+    0% {
+        transform: translateX( -150px );
+        transition: transform 1s ease;
+        opacity: 0;
+    }
+    100% {
+        transform: translateX( 0px );
+        transition: transform 1s ease;
+        opacity: 1;
+    }
+}
+.palace {
+    width: 30%;
+    height: 60%;
+    text-align: center;
+}
+.guard {
+    border-radius: 25px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: whitesmoke;
+    animation: FadeSlideRight 1s ease;
+}
+.guard > p {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+@keyframes FadeSlideRight {
+    0% {
+        transform: translateX( 150px );
+        transition: transform 1s ease;
+        opacity: 0;
+    }
+    100% {
+        transform: translateX( 0px );
+        transition: transform 1s ease;
+        opacity: 1;
+    }
+}
+@media ( max-width: 768px ) {
+    .throne {
+        width: 100%;
+        height: 38%;
+    }
+    .palace {
+        width: 100%;
+        height: 62%;
+    }
+}
+.university {
+    text-align: center;
+    height: 90vh;
+}
+.university > p {
+    font-size: 40px;
+    text-decoration: underline;
+}
+.college {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    height: 80%;
+}
+.school {
+    width: 20%;
+    height: 60%;
+    margin: 2%;
+    border: 1px solid black;
+    border-radius: 15px;
+    scroll-behavior: smooth;
+}
+.school:hover {
+    box-shadow: 7px 15px 20px 10px silver;
+    border: 3px solid black;
+    transition: 1.2s ease;
+    scroll-behavior: smooth;
+}
+.primary {
+    width: 90%;
+    height: 80%;
+    margin-right: auto;
+    margin-left: auto;
+}
+.chancellor {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+@media ( max-width: 768px ) {
+    .college {
+        width: 100%;
+    }
+    .school {
+        width: 40%;
+        height: 40%;
+    }
+    .primary {
+        height: 70%;
+    }
+    .school > h3 {
+        font-size: 14px;
+    }
+}

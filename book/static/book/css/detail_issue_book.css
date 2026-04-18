@@ -1,0 +1,161 @@
+.tom {
+    min-height: 90vh;
+    padding-bottom: 2%;
+}
+.mobile {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    height: 50vh;
+    margin-bottom: 3%;
+}
+.network {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.network > figure {
+    width: 60%;
+    height: 70%;
+}
+.high-speed {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+}
+.unlimited {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.data {
+    color: red;
+    font-size: 17px;
+    width: 40%;
+    margin-left: 30%;
+    text-align: center;
+}
+.data:hover {
+    border: 3px solid red;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    background-color: crimson;
+    padding: 2%;
+    scroll-behavior: smooth;
+    transition: 0.50s;
+}
+.compulsory {
+    margin: 2%;
+}
+.pack {
+    color: green;
+    border: 1px solid green;
+    border-radius: 20px;
+    width: 40%;
+    padding: 2%;
+    margin-left: 30%;
+}
+.pack:hover {
+    background-color: green;
+    font-weight: bold;
+    color: white;
+    font-size: 17px;
+    scroll-behavior: smooth;
+    transition: 0.5s ease-in-out;
+}
+.recharge {
+    height: 7%;
+    width: 5%;
+    margin: 2%;
+}
+.recharge:hover {
+    border: 2px solid blue;
+    border-radius: 50%;
+    padding: 2%;
+    scroll-behavior: smooth;
+    transition: 0.5s ease-in-out;
+}
+.flexcharge {
+    height: 7%;
+    width: 5%;
+    margin: 2%;
+}
+.flexcharge:hover {
+    border: 2px solid firebrick;
+    border-radius: 50%;
+    padding: 2%;
+    scroll-behavior: smooth;
+    transition: 0.5s ease-in-out;
+}
+.connect {
+    height: 7%;
+    width: 5%;
+    margin: 2%;
+}
+.connect:hover {
+    border: 2px solid purple;
+    border-radius: 50%;
+    padding: 2%;
+    scroll-behavior: smooth;
+    transition: 0.5s ease-in-out;
+}
+@media ( max-width: 768px ){
+    .tom {
+        min-height: 90vh;
+        padding-bottom: 3%;
+    }
+    .mobile {
+        display: block;
+        min-height: 90vh;
+        height: auto;
+        padding: 2% 0 8% 0;
+        box-sizing: border-box;
+    }
+    .network {
+        width: 100%;
+    }
+    .high-speed {
+        width: 100%;
+        height: 100%;
+    }
+    .unlimited {
+        width: 100%;
+        padding-bottom: 3rem;
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .compulsory {
+        margin-bottom: 3%;
+    }
+    .recharge {
+        height: 10%;
+        width: 8%;
+        border: 2px solid blue;
+        border-radius: 50%;
+        padding: 2%;
+    }
+    .flexcharge {
+        height: 10%;
+        width: 8%;
+        border: 2px solid firebrick;
+        border-radius: 50%;
+        padding: 2%;
+    }
+    .connect {
+        height: 10%;
+        width: 8%;
+        border: 2px solid purple;
+        border-radius: 50%;
+        padding: 2%;
+    }
+    .pack {
+        background-color: green;
+        color: white;
+    }
+}
