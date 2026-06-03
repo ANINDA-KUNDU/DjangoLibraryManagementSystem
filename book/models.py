@@ -7,9 +7,9 @@ from django.utils import timezone
 class Book( models.Model ):
     user = models.ForeignKey( User, on_delete = models.CASCADE )
     image_book = models.ImageField( upload_to = 'book/image_book/', null = True, blank = True ) 
-    name = models.CharField()
-    author = models.CharField()
-    borrower_name = models.CharField()
+    name = models.CharField( max_length = 255 )
+    author = models.CharField( max_length = 255 )
+    borrower_name = models.CharField( max_length = 255 )
     issue_date = models.DateTimeField( auto_now_add = True )
     modified_date = models.DateTimeField( auto_now = True )
     is_returned = models.BooleanField( default = False )

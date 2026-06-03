@@ -99,7 +99,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'library',
-        'HOST': '127.0.0.1:8000',
+        'HOST': '127.0.0.1',
         'USER': 'root',
         'PASSWORD': 'aninda@24',
         'PORT': '3306',
@@ -186,3 +186,6 @@ SECURE_HSTS_PRELOAD = True
 
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
+
+# Silence MySQL unique constraint warnings from allauth
+SILENCED_SYSTEM_CHECKS = ['models.W036']

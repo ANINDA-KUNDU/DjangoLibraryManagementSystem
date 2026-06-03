@@ -18,9 +18,9 @@ class Migration(migrations.Migration):
             name='Book',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField()),
-                ('author', models.CharField()),
-                ('borrower_name', models.CharField()),
+                ('name', models.CharField(max_length=255)),
+                ('author', models.CharField(max_length=255)),
+                ('borrower_name', models.CharField(max_length=255)),
                 ('issue_date', models.DateTimeField(auto_now_add=True)),
                 ('modified_date', models.DateTimeField(auto_now=True)),
                 ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),

@@ -18,8 +18,8 @@ class Migration(migrations.Migration):
             name='Profile',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('first_name', models.CharField()),
-                ('last_name', models.CharField()),
+                ('first_name', models.CharField(max_length=255)),
+                ('last_name', models.CharField(max_length=255)),
                 ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
             ],
         ),
